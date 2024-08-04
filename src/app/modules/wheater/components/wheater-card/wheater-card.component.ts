@@ -7,7 +7,7 @@ import { IWeather } from 'src/app/models/interfaces/weather.interface';
   templateUrl: './wheater-card.component.html',
   styleUrls: []
 })
-export class WheaterCardComponent implements OnInit {
+export class WheaterCardComponent {
 
   @Input() weatherDatas!: IWeather;
 
@@ -15,11 +15,4 @@ export class WheaterCardComponent implements OnInit {
   maxTemperatureIcon = faTemperatureHigh;
   humidityIcon = faDroplet;
   windIcon = faWind;
-
-  constructor() { }
-
-  ngOnInit() {
-    console.log('filho', this.weatherDatas);
-  }
-
 }
